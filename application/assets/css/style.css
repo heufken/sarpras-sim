@@ -1,0 +1,30 @@
+/* assets/css/style.css */
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+    padding-top: 55px; /* Menghindari tumpang tindih dengan navbar */
+  }
+  
+  .sidebar ul {
+    padding-left: 0;
+  }
+  
+  .sidebar a {
+    color: #fff;
+  }
+  
+  .sidebar a:hover {
+    background-color: #adb5bd;
+    color: #000;
+  }
+  
+  .main-content {
+    margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
+    padding: 20px;
+  }
+  
