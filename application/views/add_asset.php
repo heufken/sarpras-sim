@@ -1,48 +1,34 @@
-<!-- views/add_asset.php -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add Asset</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
+  <title>Tambah Sarpras</title>
 </head>
 <body>
-  <?php $this->load->view('partials/navbar'); ?>
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-3">
-        <?php $this->load->view('partials/sidebar'); ?>
-      </div>
-      <div class="col-md-9">
-        <h1>Add Asset</h1>
-        <form action="<?php echo base_url('asset/add'); ?>" method="post">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="category">Category</label>
-            <input type="text" class="form-control" id="category" name="category" required>
-          </div>
-          <div class="form-group">
-            <label for="quantity">Quantity</label>
-            <input type="number" class="form-control" id="quantity" name="quantity" required>
-          </div>
-          <button type="submit" class="btn btn-primary">Add</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- jQuery and Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <h1>Tambah Sarpras</h1>
+  <form action="<?php echo base_url('asset/add'); ?>" method="post">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="category">Category:</label><br>
+    <input type="text" id="category" name="category" required><br>
+    <label for="quantity">Jumlah:</label><br>
+    <input type="number" id="quantity" name="quantity" required><br>
+    <label for="spesifikasi">Spesifikasi:</label><br>
+    <input type="text" id="spesifikasi" name="spesifikasi"><br>
+    <label for="merk">Merk:</label><br>
+    <input type="text" id="merk" name="merk"><br>
+    <label for="bahan">Bahan:</label><br>
+    <input type="text" id="bahan" name="bahan"><br>
+    <label for="jenis_barang">Jenis Barang:</label><br>
+    <input type="text" id="jenis_barang" name="jenis_barang"><br>
+    <label for="asal_barang">Asal Barang:</label><br>
+    <input type="text" id="asal_barang" name="asal_barang"><br>
+    <label for="tanggal_perolehan">Tanggal Perolehan:</label><br>
+    <input type="date" id="tanggal_perolehan" name="tanggal_perolehan"><br>
+    <label for="harga">Harga:</label><br>
+    <input type="number" id="harga" name="harga"><br><br>
+    <input type="submit" value="Add">
+  </form>
 </body>
 </html>

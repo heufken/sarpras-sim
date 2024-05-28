@@ -1,22 +1,28 @@
 <!-- views/partials/sidebar.php -->
 
-<div class="sidebar">
-  <ul class="list-group">
-    <a href="<?= base_url('dashboard'); ?>" class="list-group-item list-group-item-action">
-      Dashboard
-    </a>
-    <a href="#" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#submenu-sarpras" aria-expanded="false" aria-controls="submenu-sarpras">
-      Manajemen Sarpras
-    </a>
-    <div class="collapse" id="submenu-sarpras">
-      <a href="<?= base_url('asset'); ?>" class="list-group-item list-group-item-action ml-3">Data Fasilitas</a>
-      <a href="#" class="list-group-item list-group-item-action ml-3">Data Barang</a>
+<section>
+    <div id="mySidebar" class="sidebar">
+        <button class="closebtn" onclick="closeNav()">☰</button>
+        <div class="sidebar-header">
+            <strong>OPSI</strong>
+        </div>
+        <center>
+            <a href="<?php echo base_url().'user/show' ?>">USER</a>
+            <a href="<?php echo base_url().'asset' ?>">DATA</a>
+            <a href="<?php echo base_url().'kondisi_sarpras' ?>">KONDISI</a>
+            <a href="<?php echo base_url().'pegawai' ?>">PENGELOLA</a>
+        </center>
     </div>
-    <a href="#" class="list-group-item list-group-item-action">
-      Settings
-    </a>
-    <a href="#" class="list-group-item list-group-item-action">
-      Logout
-    </a>
-  </ul>
-</div>
+</section>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("mySidebar").style.display = "block";
+    }
+</script>

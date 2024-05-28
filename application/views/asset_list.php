@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asset Management</title>
+    <title>Data Fasilitas</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
@@ -14,22 +14,29 @@
 </head>
 
 <body>
-    <?php $this->load->view('partials/navbar'); ?>
+    <?php $this->load->view('header'); ?> <!-- Load header view -->
 
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
                 <?php $this->load->view('partials/sidebar'); ?>
             </div>
-            <div class="col-md-9">
+            <div class="container">
                 <h1>Data Fasilitas</h1>
                 <a href="<?php echo base_url('asset/add'); ?>" class="btn btn-primary mb-3">Add Asset</a>
                 <table class="table">
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Category</th>
-                            <th>Quantity</th>
+                            <th>Kategori</th>
+                            <th>Spesifikasi</th>
+                            <th>Merk</th>
+                            <th>Bahan</th>
+                            <th>Jenis Barang</th>
+                            <th>Asal Barang</th>
+                            <th>Tanggal Perolehan</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -38,6 +45,13 @@
                             <tr>
                                 <td><?php echo $asset['name']; ?></td>
                                 <td><?php echo $asset['category']; ?></td>
+                                <td><?php echo $asset['spesifikasi']; ?></td>
+                                <td><?php echo $asset['merk']; ?></td>
+                                <td><?php echo $asset['bahan']; ?></td>
+                                <td><?php echo $asset['jenis_barang']; ?></td>
+                                <td><?php echo $asset['asal_barang']; ?></td>
+                                <td><?php echo $asset['tanggal_perolehan']; ?></td>
+                                <td><?php echo $asset['harga']; ?></td>
                                 <td><?php echo $asset['quantity']; ?></td>
                                 <td>
                                     <a href="<?php echo base_url('asset/edit/'.$asset['id']); ?>" class="btn btn-primary btn-sm">Edit</a>
@@ -50,6 +64,8 @@
             </div>
         </div>
     </div>
+
+    <?php $this->load->view('footer'); ?> <!-- Load footer view -->
 
     <!-- jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

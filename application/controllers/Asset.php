@@ -1,86 +1,74 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Asset extends CI_Controller {
+class Asset extends CI_Controller
+{
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         $this->load->model('Asset_model');
+        $this->load->library('session');
     }
 
-    public function index() {
+    public function index()
+    {
+        if (!$this->session->userdata('username')) {
+            redirect('Homepage/login');
+        }
         $data['assets'] = $this->Asset_model->get_assets();
         $this->load->view('asset_list', $data);
     }
 
-    public function add() {
-        // Cek apakah ada data yang dikirim melalui form
+    public function add()
+    {
         if ($this->input->post()) {
-            // Ambil data dari form
-            $name = $this->input->post('name');
-            $category = $this->input->post('category');
-            $quantity = $this->input->post('quantity');
-            
-            // Validasi data (jika diperlukan)
-            // Contoh validasi sederhana
-            if (empty($name) || empty($category) || empty($quantity)) {
-                echo "Semua field harus diisi.";
-                return;
-            }
-            
-            // Panggil model untuk menambahkan aset ke database
             $data = array(
-                'name' => $name,
-                'category' => $category,
-                'quantity' => $quantity
+                'name' => $this->input->post('name'),
+                'category' => $this->input->post('category'),
+                'quantity' => $this->input->post('quantity'),
+                'spesifikasi' => $this->input->post('spesifikasi'),
+                'merk' => $this->input->post('merk'),
+                'bahan' => $this->input->post('bahan'),
+                'jenis_barang' => $this->input->post('jenis_barang'),
+                'asal_barang' => $this->input->post('asal_barang'),
+                'tanggal_perolehan' => $this->input->post('tanggal_perolehan'),
+                'harga' => $this->input->post('harga'),
             );
             $this->Asset_model->add_asset($data);
-
-            // Redirect kembali ke halaman asset list
             redirect('asset');
         } else {
-            // Jika tidak ada data yang dikirim, tampilkan halaman tambah aset
             $this->load->view('add_asset');
         }
     }
 
-    public function edit($id) {
-        // Cek apakah ada data yang dikirim melalui form
+    public function edit($id)
+    {
         if ($this->input->post()) {
-            // Ambil data dari form
-            $name = $this->input->post('name');
-            $category = $this->input->post('category');
-            $quantity = $this->input->post('quantity');
-            
-            // Validasi data (jika diperlukan)
-            // Contoh validasi sederhana
-            if (empty($name) || empty($category) || empty($quantity)) {
-                echo "Semua field harus diisi.";
-                return;
-            }
-            
-            // Panggil model untuk mengupdate aset di database
             $data = array(
-                'name' => $name,
-                'category' => $category,
-                'quantity' => $quantity
+                'name' => $this->input->post('name'),
+                'category' => $this->input->post('category'),
+                'quantity' => $this->input->post('quantity'),
+                'spesifikasi' => $this->input->post('spesifikasi'),
+                'merk' => $this->input->post('merk'),
+                'bahan' => $this->input->post('bahan'),
+                'jenis_barang' => $this->input->post('jenis_barang'),
+                'asal_barang' => $this->input->post('asal_barang'),
+                'tanggal_perolehan' => $this->input->post('tanggal_perolehan'),
+                'harga' => $this->input->post('harga'),
             );
             $this->Asset_model->update_asset($id, $data);
-
-            // Redirect kembali ke halaman asset list
             redirect('asset');
         } else {
-            // Jika tidak ada data yang dikirim, tampilkan halaman edit aset
             $data['asset'] = $this->Asset_model->get_asset_by_id($id);
             $this->load->view('edit_asset', $data);
         }
     }
 
-    public function delete($id) {
-        // Panggil model untuk menghapus aset dari database
+    public function delete($id)
+    {
         $this->Asset_model->delete_asset($id);
-
-        // Redirect kembali ke halaman asset list
         redirect('asset');
     }
 }
+?>
