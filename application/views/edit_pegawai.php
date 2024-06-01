@@ -9,6 +9,9 @@
     <h1>Edit Data Pegawai</h1>
     
     <form action="<?php echo base_url('pegawai/edit/'.$pegawai['id_pegawai']); ?>" method="post">
+		<label for="id_pegawai">ID Pegawai:</label><br>
+        <input type="text" id="id_pegawai" name="id_pegawai" value="<?php echo $pegawai['id_pegawai']; ?>" required><br>
+
         <label for="nama_lengkap">Nama Lengkap:</label><br>
         <input type="text" id="nama_lengkap" name="nama_lengkap" value="<?php echo $pegawai['nama_lengkap']; ?>" required><br>
 

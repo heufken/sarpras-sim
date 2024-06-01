@@ -27,6 +27,7 @@
                 <table class="table">
                     <thead>
                         <tr>
+							<th>ID Pegawai</th>
                             <th>Nama Lengkap</th>
                             <th>Tanggal Lahir</th>
                             <th>Tempat Lahir</th>
@@ -41,6 +42,7 @@
                     <tbody>
                         <?php foreach ($pegawai as $pgw): ?>
                         <tr>
+							<td><?php echo $pgw['id_pegawai']; ?></td>
                             <td><?php echo $pgw['nama_lengkap']; ?></td>
                             <td><?php echo $pgw['tanggal_lahir']; ?></td>
                             <td><?php echo $pgw['tempat_lahir']; ?></td>

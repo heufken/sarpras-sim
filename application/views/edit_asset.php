@@ -14,6 +14,10 @@
         <h1>Edit Asset</h1>
         <form action="<?php echo base_url('asset/edit/'.$asset['id']); ?>" method="post">
             <div class="form-group">
+				<div class="form-group">
+                <label for="id">ID</label>
+                <input type="text" class="form-control" id="id" name="id" value="<?php echo $asset['id']; ?>" required>
+            </div>
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" name="name" value="<?php echo $asset['name']; ?>" required>
             </div>

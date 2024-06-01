@@ -23,10 +23,11 @@
             </div>
             <div class="container">
                 <h1>Data Fasilitas</h1>
-                <a href="<?php echo base_url('asset/add'); ?>" class="btn btn-primary mb-3">Add Asset</a>
+                <a href="<?php echo base_url('asset/add'); ?>" class="btn btn-primary mb-3">Tambah Data Sarpras</a>
                 <table class="table">
                     <thead>
                         <tr>
+							<th>ID</th>
                             <th>Name</th>
                             <th>Kategori</th>
                             <th>Spesifikasi</th>
@@ -43,7 +44,8 @@
                     <tbody>
                         <?php foreach ($assets as $asset): ?>
                             <tr>
-                                <td><?php echo $asset['name']; ?></td>
+                                <td><?php echo $asset['id']; ?></td>
+								<td><?php echo $asset['name']; ?></td>
                                 <td><?php echo $asset['category']; ?></td>
                                 <td><?php echo $asset['spesifikasi']; ?></td>
                                 <td><?php echo $asset['merk']; ?></td>

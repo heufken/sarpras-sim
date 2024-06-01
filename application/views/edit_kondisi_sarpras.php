@@ -23,7 +23,7 @@
 
         <label for="keterangan">Keterangan:</label><br>
         <input type="text" id="keterangan" name="keterangan" value="<?php echo $kondisi_sarpras['keterangan']; ?>" required><br><br>
-
+		
         <input type="submit" value="Simpan">
     </form>
 </body>

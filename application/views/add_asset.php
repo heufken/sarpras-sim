@@ -8,6 +8,8 @@
 <body>
   <h1>Tambah Sarpras</h1>
   <form action="<?php echo base_url('asset/add'); ?>" method="post">
+	<label for="id">ID:</label><br>
+    <input type="text" id="id" name="id" required><br>
     <label for="name">Name:</label><br>
     <input type="text" id="name" name="name" required><br>
     <label for="category">Category:</label><br>

@@ -9,6 +9,9 @@
     <h1>Tambah Data Pegawai</h1>
     
     <form action="<?php echo base_url('pegawai/tambah'); ?>" method="post">
+		<label for="id_pegawai">ID Pegawai:</label><br>
+        <input type="text" id="id_pegawai" name="id_pegawai" required><br>
+
         <label for="nama_lengkap">Nama Lengkap:</label><br>
         <input type="text" id="nama_lengkap" name="nama_lengkap" required><br>
 

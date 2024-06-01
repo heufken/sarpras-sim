@@ -31,6 +31,7 @@
                 <table class="table">
                     <thead>
                         <tr>
+						    <th>ID</th>
                             <th>ID Sarpras</th>
                             <th>Tanggal Pengecekan</th>
                             <th>Kondisi</th>
@@ -42,6 +43,7 @@
                     <tbody>
                         <?php foreach ($kondisi_sarpras as $kondisi): ?>
                         <tr>
+							<td><?php echo $kondisi['id']; ?></td>
                             <td><?php echo $kondisi['id_sarpras']; ?></td>
                             <td><?php echo $kondisi['tgl_pengecekan']; ?></td>
                             <td><?php echo $kondisi['kondisi']; ?></td>

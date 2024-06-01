@@ -46,7 +46,7 @@ body{
 }
 
 footer{
-	background: #A52A2A;  
+	background: #686D76;  
 	color: #fff;
 	padding: 20px;
 }
@@ -105,7 +105,7 @@ section{
 .sidebar a:hover {
     color: #fff;
     padding-inline: 0px;
-    background: #f70404;
+    background: #686D76;
     color: rgb(0, 0, 0);
 }
 
@@ -139,9 +139,19 @@ section{
 }
 
 .openbtn:hover {
-    background-color: #e90000;
+    background-color: #686D76;
 }
 
 .closebtn:hover {
     background-color: #b0b0b0;
+}
+
+ 
+.table1, th, td {
+    border: 1px solid #072449;
+    padding: 8px 20px;
+}
+
+th {
+    background-color: #686D76;
 }

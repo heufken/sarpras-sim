@@ -25,9 +25,9 @@
     </div>
       <center>
           <a href="<?php echo base_url().'user/show' ?>">USER</a>
-          <a href="<?php echo base_url().'asset' ?>">DATA</a>
-          <a href="<?php echo base_url().'kondisi_sarpras' ?>">KONDISI</a>
-          <a href="<?php echo base_url().'pegawai' ?>">PENGELOLA</a>
+          <a href="<?php echo base_url().'asset' ?>">DATA SARPRAS</a>
+          <a href="<?php echo base_url().'kondisi_sarpras' ?>">DATA PENGECEKAN</a>
+          <a href="<?php echo base_url().'pegawai' ?>">DATA PEGAWAI</a>
       </center>
     </div>
   </section>

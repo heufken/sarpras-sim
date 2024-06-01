@@ -1,3 +1,7 @@
+<head>
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+
 <section>
 	<div id="content">
 			<h2>Form Edit Data User</h2>
